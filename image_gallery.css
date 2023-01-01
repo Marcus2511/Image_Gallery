@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    background-image: url(background.jpg);
+
+}
+
+.innerImg{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.wraper{    
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+img{
+
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.image{
+    margin: 20px 0;
+    width: 22%;
+    height: 200px;
+    border: 4px solid burlywood;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.image:hover img{
+    transform: scale(1.2);
+}
+
+.gallery{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: 0.5s;
+}
+
+.close{
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+}
+
+
+.control{
+    font-size: 35px;
+    position: absolute;
+}
+
+.control.right{
+    right: 15px;
+}
+
+.control.left{
+    left:15px
+}
+
+.gallery_inner{
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.hide{
+    display: none;
+}
+
+.close:hover, .control:hover{
+    cursor: pointer;
+}
